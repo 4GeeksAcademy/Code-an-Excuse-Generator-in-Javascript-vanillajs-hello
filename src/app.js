@@ -23,11 +23,15 @@ window.onload = function() {
     "during my lunch",
     "while I was praying"
   ];
-  //Function
-  let whoRandom = Math.floor(Math.random() * who.length);
-  let actionRandom = Math.floor(Math.random() * action.length);
-  let whatRandom = Math.floor(Math.random() * what.length);
-  let whenRandom = Math.floor(Math.random() * when.length);
+
+  function excuseGenerator(arr) {
+    return Math.floor(Math.random() * arr.length);
+  }
+
+  let whoRandom = excuseGenerator(who);
+  let actionRandom = excuseGenerator(action);
+  let whatRandom = excuseGenerator(what);
+  let whenRandom = excuseGenerator(when);
 
   document.querySelector(
     "#excuse"
